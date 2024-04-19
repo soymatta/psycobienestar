@@ -6,11 +6,12 @@ class Tests extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('PsycoBienestar',
-            style: TextStyle(color: Color(0xFF1C5100))),
-        backgroundColor: const Color(0xFF2B9800),
-      ),
+        appBar: AppBar(
+          title: const Text('Tests psicologicos',
+              style: TextStyle(color: Color(0xFF1C5100))),
+          backgroundColor: const Color(0xFF2B9800),
+          centerTitle: true,
+        ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
