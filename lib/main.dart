@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:psycobienestar/splash.dart';
+import 'package:psycobienestar/atencion.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFFCFFFBB)),
         useMaterial3: true,
       ),
-      home: const Splash(),
+      home: const Atencion(),
     );
   }
 }
