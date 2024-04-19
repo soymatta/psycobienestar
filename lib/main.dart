@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:psycobienestar/homePage.dart';
+import 'package:psycobienestar/login.dart';
+import 'package:psycobienestar/routes/AppRoutes.dart';
 import 'package:psycobienestar/splash.dart';
 
 void main() {
@@ -17,7 +20,17 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFFCFFFBB)),
         useMaterial3: true,
       ),
-      home: const Splash(),
+      initialRoute: AppRoutes.home,
+      onGenerateRoute: (routes) {
+        switch(routes.name) {
+          case AppRoutes.home:
+            return MaterialPageRoute(builder: (context) => const HomePage());
+          case AppRoutes.login:
+            return MaterialPageRoute(builder: (context) => const Login());
+          case AppRoutes.splash:
+            return MaterialPageRoute(builder: (context) => const Splash());
+        }
+      },
     );
   }
 }
