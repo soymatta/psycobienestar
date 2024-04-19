@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:psycobienestar/homePage.dart';
+import 'package:psycobienestar/present.dart';
 import 'package:psycobienestar/login.dart';
 
 class Register extends StatelessWidget {
@@ -58,11 +58,11 @@ class Register extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const HomePage()),
+                  MaterialPageRoute(builder: (context) => const Present()),
                 );
               },
               style: ElevatedButton.styleFrom(
-                primary: Color(0xFF2B9800),
+                primary: const Color(0xFF2B9800),
               ),
               child: const Text('Finalizar',
                   style: TextStyle(color: Colors.white)),
@@ -84,7 +84,7 @@ class Register extends StatelessWidget {
               ),
             ),
             const Spacer(),
-            SizedBox(height: 5),
+            const SizedBox(height: 5),
             Container(
               height: 1,
               color: const Color(0xFF1C5100),
