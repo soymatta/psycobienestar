@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:psycobienestar/homePage.dart';
 import 'package:psycobienestar/register.dart';
+import 'package:psycobienestar/present.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -44,11 +44,11 @@ class Login extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const HomePage()),
+                  MaterialPageRoute(builder: (context) => const Present()),
                 );
               },
               style: ElevatedButton.styleFrom(
-                primary: Color(0xFF2B9800),
+                primary: const Color(0xFF2B9800),
               ),
               child:
                   const Text('Entrar', style: TextStyle(color: Colors.white)),
@@ -63,7 +63,7 @@ class Login extends StatelessWidget {
             ),
             const Spacer(),
             Row(children: [
-              Spacer(),
+              const Spacer(),
               const Text("¿Aun no tienes cuenta?"),
               GestureDetector(
                 onTap: () {
@@ -81,9 +81,9 @@ class Login extends StatelessWidget {
                   ),
                 ),
               ),
-              Spacer(),
+              const Spacer(),
             ]),
-            SizedBox(height: 5),
+            const SizedBox(height: 5),
             Container(
               height: 1,
               color: const Color(0xFF1C5100),

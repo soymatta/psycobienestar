@@ -11,7 +11,6 @@ class Splash extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            const SizedBox(),
             const Spacer(),
             Image.asset('assets/img/Splash.png'),
             const Spacer(),
