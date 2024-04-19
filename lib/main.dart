@@ -3,6 +3,7 @@ import 'package:psycobienestar/homePage.dart';
 import 'package:psycobienestar/login.dart';
 import 'package:psycobienestar/routes/AppRoutes.dart';
 import 'package:psycobienestar/splash.dart';
+import 'package:psycobienestar/tests.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,6 +30,8 @@ class MyApp extends StatelessWidget {
             return MaterialPageRoute(builder: (context) => const Login());
           case AppRoutes.splash:
             return MaterialPageRoute(builder: (context) => const Splash());
+          case AppRoutes.tests:
+            return MaterialPageRoute(builder: (context) => const Tests());
         }
       },
     );

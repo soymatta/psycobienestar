@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:psycobienestar/routes/AppRoutes.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -44,7 +45,9 @@ class HomePage extends StatelessWidget {
                 height: height * 0.04,
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, AppRoutes.tests);
+                },
                 child: Container(
                   padding: EdgeInsets.symmetric(horizontal: width * 0.03),
                   decoration: BoxDecoration(
@@ -222,6 +225,8 @@ class HomePage extends StatelessWidget {
               )
             ],
           ),
-        ));
+        ),
+      bottomNavigationBar: BottomAppBar(),
+    );
   }
 }
