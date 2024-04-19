@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class UserDetails extends StatefulWidget {
   const UserDetails({super.key});
@@ -93,7 +94,26 @@ class _UserDetailsState extends State<UserDetails> {
                 ),
               ),
 
-              SizedBox(height: height * 0.02,)
+              SizedBox(height: height * 0.02),
+
+              Center(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SvgPicture.asset('assets/svg/caution.svg', color: const Color(0xff1C5100), height: height * 0.02,),
+                        SizedBox(width: width * 0.02,),
+                        TextButton(onPressed: (){}, child: Text('Términos y Condiciones'))
+                      ],
+                    ),
+                    SizedBox(height: height * 0.013,),
+                    TextButton(onPressed: (){}, child: Text('Eliminar Cuenta', style: TextStyle(color: Color(0xff1C5100)),))
+
+                  ],
+                ),
+              )
 
             ],
           ),
