@@ -27,6 +27,7 @@ class Splash extends StatelessWidget {
               ),
               child: const Text('Entrar'),
             ),
+            SizedBox(height: 20),
           ],
         ),
       ),
