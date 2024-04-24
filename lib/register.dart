@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:psycobienestar/present.dart';
 import 'package:psycobienestar/login.dart';
+import 'package:psycobienestar/routes/AppRoutes.dart';
 
 class Register extends StatelessWidget {
   const Register({super.key});
@@ -56,10 +57,7 @@ class Register extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Present()),
-                );
+                Navigator.pushReplacementNamed(context, AppRoutes.present);
               },
               style: ElevatedButton.styleFrom(
                 primary: const Color(0xFF2B9800),
@@ -70,10 +68,7 @@ class Register extends StatelessWidget {
             const SizedBox(height: 20),
             GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Login()),
-                );
+                Navigator.pushNamed(context, AppRoutes.login);
               },
               child: const Text(
                 'Ya tengo una cuenta',

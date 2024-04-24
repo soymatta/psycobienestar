@@ -31,7 +31,7 @@ class _UserDetailsState extends State<UserDetails> {
               Center(
                 child: Column(
                   children: [
-                    const CircleAvatar(radius: 60),
+                    CircleAvatar(radius: 60, child: Icon(Icons.account_circle,size: height * 0.1, color: Color(0xff1C5100))),
                     SizedBox(
                       height: height * 0.001,
                     ),

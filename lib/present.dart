@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:psycobienestar/homePage.dart';
+import 'package:psycobienestar/routes/AppRoutes.dart';
 
 class Present extends StatelessWidget {
   const Present({Key? key});
@@ -62,11 +63,7 @@ class Present extends StatelessWidget {
                     const Spacer(),
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const HomePage()),
-                        );
+                        Navigator.pushReplacementNamed(context, AppRoutes.home);
                       },
                       style: ElevatedButton.styleFrom(
                         primary: const Color(0xFF2B9800),

@@ -17,9 +17,14 @@ class HomePage extends StatelessWidget {
         leadingWidth: width * 0.5,
         // Poner Imagen
         actions: [
-          Container(
-            margin: EdgeInsets.only(right: width * 0.05),
-            child: CircleAvatar(),
+          GestureDetector(
+            onTap: (){
+              Navigator.pushNamed(context, AppRoutes.userDetails);
+            },
+            child: Container(
+              margin: EdgeInsets.only(right: width * 0.05),
+              child: CircleAvatar(child: IconButton(onPressed: (){Navigator.pushNamed(context, AppRoutes.userDetails);}, icon: Icon(Icons.account_circle, color: Color(0xff1C5100),)),),
+            ),
           )
         ],
       ),
@@ -135,7 +140,9 @@ class HomePage extends StatelessWidget {
             ),
             SizedBox(height: height * 0.03),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, AppRoutes.atencion);
+              },
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: width * 0.01),
                 decoration: BoxDecoration(

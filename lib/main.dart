@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:psycobienestar/atencion.dart';
 import 'package:psycobienestar/homePage.dart';
 import 'package:psycobienestar/login.dart';
+import 'package:psycobienestar/present.dart';
+import 'package:psycobienestar/register.dart';
 import 'package:psycobienestar/routes/AppRoutes.dart';
 import 'package:psycobienestar/splash.dart';
 import 'package:psycobienestar/tests.dart';
@@ -22,7 +25,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFFCFFFBB)),
         useMaterial3: true,
       ),
-      initialRoute: AppRoutes.userDetails,
+      initialRoute: AppRoutes.home,
       onGenerateRoute: (routes) {
         switch(routes.name) {
           case AppRoutes.home:
@@ -35,6 +38,12 @@ class MyApp extends StatelessWidget {
             return MaterialPageRoute(builder: (context) => const Tests());
           case AppRoutes.userDetails:
             return MaterialPageRoute(builder: (context) => const UserDetails());
+          case AppRoutes.register:
+            return MaterialPageRoute(builder: (context) => const Register());
+          case AppRoutes.present:
+            return MaterialPageRoute(builder: (context) => const Present());
+          case AppRoutes.atencion:
+            return MaterialPageRoute(builder: (context) => const Atencion());
         }
       },
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:psycobienestar/login.dart';
+import 'package:psycobienestar/routes/AppRoutes.dart';
 
 class Splash extends StatelessWidget {
   const Splash({Key? key});
@@ -16,10 +17,7 @@ class Splash extends StatelessWidget {
             const Spacer(),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Login()),
-                );
+                Navigator.pushReplacementNamed(context, AppRoutes.login);
               },
               style: ElevatedButton.styleFrom(
                 primary: Colors.white,
